@@ -1,9 +1,13 @@
-fetch('https://randomuser.me/api/')
+fetch('url')
 
-.then(response => response.json()) // Turn the response into usable data
-.then(data => {
-  console.log(data); // Do something with the data
+.then(response =>{
+  if(!response.ok){
+    throw new Error('Network response was not OK')
+  }
+  return response.json();
 })
-.catch(error => {
-  console.error('Something went wrong:', error); // Handle errors
-});
+
+.then(data => console.log(data))
+.catch(error => console.log(error))
+
+// Note : after the data is received we need to convert the data into json format so that we could read/use it.
