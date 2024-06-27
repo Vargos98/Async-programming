@@ -1,4 +1,4 @@
-axios.get('url')
+axios.get('https://randomuser.me/api/')
 .then(result =>{
   console.log(res.data);
 })

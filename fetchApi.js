@@ -1,4 +1,4 @@
-fetch('url')
+fetch('https://randomuser.me/api/')
 
 .then(response =>{
   if(!response.ok){
